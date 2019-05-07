@@ -1,0 +1,55 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" [routerLink]="[ '/all']">Avenue Blogs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link"[routerLink]="[ '/feed']">Arena</a>
+          </li>
+      <li class="nav-item active">
+        <a class="nav-link"[routerLink]="[ '/all']">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/create']">Post</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- navbar end -->
+<div class="jumbotron jumbotron-fluid bg-secondary text-light text-center">
+    <div class="container">
+      <h1 class="display-4">Avenue Blogs</h1>
+    </div>
+  </div>
+<br>
+<div class="container" style="text-align:center" *ngIf='allBlogs.length>0'>
+  <div class="row" style="text-align:center">
+    <div class="col-md-12 display-4" style="font-size:22px">All Blogs </div>
+    <br><br><br><br>
+  </div>
+  <div class="row" style="text-align:center">
+    <div *ngFor="let blog of allBlogs" class="col-md-4">
+
+      <div class="panel panel-default border border-primary panel-properties">
+        <div class="panel-heading ">{{blog.title | uppercase}}</div>
+        <div class="panel-body">
+         
+            <p>{{blog.description}}</p>
+        </div>
+        <div class="panel-footer">Posted on {{blog.created | date}}<br/> by {{blog.author}}
+        <br/><br/><a [routerLink]="['/view',blog.blogId]" class="btn btn-block btn-primary">Read</a>
+        
+        </div>
+        
+      </div>
+
+      <br/>
+    </div>
+
+  </div>
+
+</div>

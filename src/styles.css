@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+html body{
+    background: lightgoldenrodyellow;     
+}
+.toast {
+    opacity: 1 !important;
+}
+.header{
+    background-color: #04192E;
+    display: block;
+    padding: 3%;
+    color:white;
+    font-size: 26px;
+}

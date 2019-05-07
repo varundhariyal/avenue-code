@@ -1,0 +1,21 @@
+<!-- user welcome note -->
+<div class="jumbotron jumbotron-fluid background-color text-center">
+  <div class="container">
+    <h5 class="display-4">Hello {{firstName}}</h5>
+    <p class="lead">Welcome to Avenue!</p>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid bg-info">
+  <div class="container">
+    <h1 class="display-4">Blog</h1>
+    <p class="lead">Want to share some views?</p>
+    <a [routerLink]="[ '/create']" class="btn btn-block btn-outline-primary">Go To Blog</a>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid bg-secondary text-light">
+  <div class="container">
+    <h1 class="display-4">Chat</h1>
+    <p class="lead">Start a chat at a go!</p>
+    <a [routerLink]="['/chat']" class="btn btn-block btn-outline-dark">Go To Chat</a>
+  </div>
+</div>

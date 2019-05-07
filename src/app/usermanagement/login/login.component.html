@@ -1,0 +1,38 @@
+<div class="jumbotron jumbotron-fluid bg-transparent banner-img img-fluid text-center text-light">
+  <div class="container">
+    <h1 class="display-4">Avenue</h1>
+    <p class="lead">Connecting Dots...</p>
+  </div>
+</div>
+<!-- login -->
+<div class="row p-0 m-0">
+
+  <div class="col-sm"></div>
+
+  <div class="col-sm p-5">
+
+    <h2 class="form-signin-heading">Please sign in</h2>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+
+    <input type="email" id="inputEmail" class="form-control" [(ngModel)]="email" placeholder="Email address" required
+      autofocus>
+
+    <br>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+
+    <input type="password" id="inputPassword" class="form-control" [(ngModel)]="password" placeholder="Password"
+      required>
+
+    <br>
+
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="signinFunction()">Sign in</button>
+    <br>
+    <h6 class="card-title">New to Avenue?</h6>
+    <button class="btn-outline-primary" (click)='signupFunction()'>Sign up now--></button>
+  </div>
+
+  <div class="col-sm"></div>
+
+</div>
